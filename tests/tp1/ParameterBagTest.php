@@ -42,6 +42,7 @@ class ParameterBagTest extends \PHPUnit_Framework_TestCase
     public function testGetInt()
     {
         $this->assertEquals(0,$this->bag->getInt("foo"));
+        //test Travis
     }
 
     public function testSet()
