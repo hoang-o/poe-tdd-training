@@ -9,7 +9,7 @@ Lancer les tests
 
     bin/phpunit tests/tp1
 
-Voir la couverture de code :
+Pour lancer les tests et voir la couverture de code :
 
     bin/phpunit tests/tp1 --coverage-html path/to/directory
 
@@ -26,5 +26,5 @@ Phake
 
 * [Phake](http://phake.readthedocs.org/en/2.1)
 
-* [Phake, comment fonctionne les stubs](http://phake.readthedocs.org/en/2.1/method-stubbing.html#how-phake-when-works)
+* [Phake, comment fonctionnent les stubs](http://phake.readthedocs.org/en/2.1/method-stubbing.html#how-phake-when-works)
 
