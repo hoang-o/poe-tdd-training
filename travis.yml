@@ -8,7 +8,7 @@ php:
 
 
 before_script:
-  - composer require symfony/http-foundation:${SYMFONY_VERSION}
+  - composer install --prefer-dist
 
 script: phpunit --coverage-text
 
