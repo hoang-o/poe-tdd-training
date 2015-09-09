@@ -13,7 +13,7 @@ class HRDepartment
     }
 
     /**
-     * @throws \RuntimeException When the given person is already an employee
+     * @throws \tp2\Exception\AlreadyEmployedException When the given person is already an employee
      */
     public function hire(Person $person)
     {
@@ -21,7 +21,7 @@ class HRDepartment
     }
 
     /**
-     * @throws \RuntimeException When the given person is not an employee
+     * @throws \tp2\Exception\NoEmployedException When the given person is not an employee
      */
     public function fire(Person $person)
     {

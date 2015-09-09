@@ -6,10 +6,12 @@ use tp1\ParameterBag;
 
 class ParameterBagTest extends \PHPUnit_Framework_TestCase
 {
-    // public function setUp()
-    // {
+    protected $bag;
 
-    // }
+    public function setUp()
+    {
+        $this->bag = new ParameterBag(array('foo' => 'bar', 'baz' => '123'));
+    }
 
     public function testCount()
     {
@@ -18,13 +20,9 @@ class ParameterBagTest extends \PHPUnit_Framework_TestCase
 
     public function testGet()
     {
-        $bag = new ParameterBag(array('foo' => 'bar'));
-
-        // will pass
-        $this->assertEquals('bar', $bag->get('foo'));
-
-        // will fail
-        $this->assertEquals('lol', $bag->get('foo'));
+        $this->assertEquals('bar', $this->bag->get('foo'));
+        $this->assertEquals(null, $this->bag->get('pony'));
+        $this->assertEquals('pink', $this->bag->get('pony', 'pink'));
     }
 
     public function testGetInt()
