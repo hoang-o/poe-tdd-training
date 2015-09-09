@@ -47,31 +47,36 @@ class ParameterBagTest extends \PHPUnit_Framework_TestCase
 
     public function testSet()
     {
-        $this->assertEquals('key',$this->bag->set($key, $value));
+        $this->bag->set("foo", "test");
+        $this->assertEquals('test', $this->bag->get("foo"));
     }
 
     public function testHas()
     {
-
+        $this->assertEquals(true, $this->bag->has("foo"));
     }
 
     public function testRemove()
     {
+        $this->assertEquals(true, $this->bag->has("foo"));
+        $this->bag->remove("foo");
+        $this->assertEquals(false, $this->bag->has(""));
 
     }
 
     public function testAll()
     {
-
+        $this->assertEquals(array('foo' => 'bar', 'baz' => '123'), $this->bag->all());
     }
 
     public function testKeys()
     {
-
+        $this->assertEquals(array('foo', 'baz'), $this->bag->keys("foo"));
     }
 
     public function testAdd()
     {
-
+        $this->bag->add(array('foo2' => 'test'));
+        $this->assertEquals('test',$this->bag->get('foo2'));
     }
 }
